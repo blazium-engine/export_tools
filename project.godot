@@ -1,0 +1,26 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="ExportTools"
+config/features=PackedStringArray("4.3.2", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
+[gui]
+
+theme/font_color_override=3
+theme/custom_font_color=Color(1, 0.960938, 0, 1)
+theme/font_outline_size=16.0

@@ -1,0 +1,5310 @@
+[gd_scene load_steps=27 format=3 uid="uid://dumt2d48v5225"]
+
+[ext_resource type="Script" uid="uid://bf7nddoxj52ts" path="res://export_tools.gd" id="1_ox0rb"]
+[ext_resource type="Shader" uid="uid://qbu3wlqdd3hg" path="res://src/bg_logo.gdshader" id="2_0h0bt"]
+[ext_resource type="FontFile" uid="uid://b6m3b7x1xki4d" path="res://assets/Kalam-Bold.ttf" id="2_p5xux"]
+[ext_resource type="Texture2D" uid="uid://bkfruffm1kcg5" path="res://assets/blazium_bg.svg" id="4_p5xux"]
+[ext_resource type="Script" uid="uid://jgdc5uc7x16x" path="res://src/IconTextureRect.gd" id="5_5uegb"]
+[ext_resource type="FontFile" uid="uid://hjd57clufafd" path="res://assets/Blaka-Regular.ttf" id="6_frqin"]
+[ext_resource type="FontFile" uid="uid://bmhrv8jqo5ryv" path="res://assets/Neucha-Regular.ttf" id="7_gibah"]
+[ext_resource type="Texture2D" uid="uid://dln6fhcugmek1" path="res://assets/tictactoe.svg" id="8_is476"]
+[ext_resource type="FontFile" uid="uid://7c6umkcgx5tp" path="res://assets/KleeOne-Regular.ttf" id="8_lxbpk"]
+[ext_resource type="Script" uid="uid://cqpul04nfm8xy" path="res://src/checker_stylebox.gd" id="8_umucs"]
+[ext_resource type="FontFile" uid="uid://b5kbb84p6wfmu" path="res://assets/PoorStory-Regular.ttf" id="9_lxbpk"]
+[ext_resource type="FontFile" uid="uid://42munbbgdqdd" path="res://assets/Itim-Regular.ttf" id="10_5uegb"]
+
+[sub_resource type="Theme" id="Theme_frqin"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3x61t"]
+bg_color = Color(0.499256, 0.334097, 0.823225, 0.521569)
+
+[sub_resource type="Environment" id="Environment_6x15w"]
+background_mode = 3
+tonemap_mode = 4
+tonemap_white = 7.36
+glow_enabled = true
+glow_strength = 1.35
+glow_bloom = 0.18
+
+[sub_resource type="World3D" id="World3D_5uegb"]
+environment = SubResource("Environment_6x15w")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5uegb"]
+bg_color = Color(0.0876617, 0.058136, 0.117188, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p5xux"]
+shader = ExtResource("2_0h0bt")
+shader_parameter/position = Vector2(10.51, 0.27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0h0bt"]
+texture = ExtResource("4_p5xux")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0h0bt"]
+shader = ExtResource("2_0h0bt")
+shader_parameter/position = Vector2(10.51, 24.315)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p5xux"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_frqin"]
+shader = ExtResource("2_0h0bt")
+shader_parameter/position = Vector2(10.51, -31.61)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gibah"]
+shader = ExtResource("2_0h0bt")
+shader_parameter/position = Vector2(18.675, 0.225)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_umucs"]
+shader = ExtResource("2_0h0bt")
+shader_parameter/position = Vector2(11.05, 8.54)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_is476"]
+shader = ExtResource("2_0h0bt")
+shader_parameter/position = Vector2(11.05, 8.54)
+
+[sub_resource type="StyleBox" id="StyleBox_is476"]
+resource_local_to_scene = false
+resource_name = ""
+content_margin_left = -1.0
+content_margin_top = -1.0
+content_margin_right = -1.0
+content_margin_bottom = -1.0
+script = ExtResource("8_umucs")
+visible = true
+checker_size = 16
+checker_light_color = Color(0.8, 0.8, 0.8, 1)
+checker_dark_color = Color(0.4, 0.4, 0.4, 1)
+scale = 1
+grow_left = 0
+grow_top = 0
+grow_right = 0
+grow_bottom = 0
+metadata/_custom_type_script = "uid://cqpul04nfm8xy"
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 4332.0
+offset_bottom = 3507.0
+script = ExtResource("1_ox0rb")
+bg_color = Color(0.0876617, 0.058136, 0.117188, 1)
+font_color = Color(1, 0.960938, 0, 1)
+font_outline_color = Color(0, 0, 0, 1)
+bg_icon_color = Color(1, 0.83, 0.949, 0.0352941)
+icon_x_color = Color(1, 0.246094, 0.246094, 1)
+icon_x_outline_color = Color(0, 0, 0, 0.8)
+icon_o_color = Color(1, 0.960784, 0, 1)
+icon_o_outline_color = Color(0, 0, 0, 0.780392)
+icon_x_outline_size = 10.0
+icon_o_outline_size = 10.0
+
+[node name="Steam" type="Node2D" parent="."]
+
+[node name="SteamPanel" type="Panel" parent="Steam"]
+offset_right = 3936.0
+offset_bottom = 3168.0
+theme = SubResource("Theme_frqin")
+theme_override_styles/panel = SubResource("StyleBoxFlat_3x61t")
+metadata/_edit_lock_ = true
+
+[node name="SteamLabel" type="Label" parent="Steam/SteamPanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 175.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 128
+text = "Steam"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="MainCapsule" type="SubViewportContainer" parent="Steam/SteamPanel"]
+editor_description = "Main Capsule * 1232px wide x 706px tall
+Design: These should be designed to market the product. For best results, please use the key art and logo that is being used for any retail boxes or marketing. Do not include quotes, review scores, or awards.
+Usage: These appear at the top of the front page in the featured and recommended carousel.
+Sizes: 1232px x 706px"
+custom_minimum_size = Vector2(1232, 706)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 192.0
+offset_right = 1264.0
+offset_bottom = 898.0
+stretch = true
+
+[node name="MainCapsuleViewport" type="SubViewport" parent="Steam/SteamPanel/MainCapsule"]
+unique_name_in_owner = true
+world_3d = SubResource("World3D_5uegb")
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1232, 706)
+render_target_update_mode = 4
+
+[node name="MainCapsuleBgPanel" type="Panel" parent="Steam/SteamPanel/MainCapsule/MainCapsuleViewport"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -43.0
+offset_right = 75.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5uegb")
+
+[node name="MainCapsuleIconPanel" type="Panel" parent="Steam/SteamPanel/MainCapsule/MainCapsuleViewport/MainCapsuleBgPanel"]
+unique_name_in_owner = true
+self_modulate = Color(1, 0.83, 0.949, 0.0352941)
+material = SubResource("ShaderMaterial_p5xux")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0h0bt")
+
+[node name="MainCapsuleIcon" type="TextureRect" parent="Steam/SteamPanel/MainCapsule/MainCapsuleViewport/MainCapsuleBgPanel/MainCapsuleIconPanel"]
+unique_name_in_owner = true
+self_modulate = Color(0.97, 0.97, 0.97, 0.823529)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+script = ExtResource("5_5uegb")
+
+[node name="SmallCapsule" type="SubViewportContainer" parent="Steam/SteamPanel"]
+editor_description = "Small Capsule * 462px wide x 174px tall
+Design: These are small, so they should focus on making the logo clearly legible, even at the smallest size.
+Usage: These are used for all the lists throughout Steam. Search results, top-sellers, new releases, etc.
+Sizes: 462px x 174px
+Requirements: Small Capsule should contain readable logo, even at smallest size. In most cases, this means your logo should nearly fill the small capsule.
+Note: Needs one for each supported language.
+"
+custom_minimum_size = Vector2(462, 174)
+layout_mode = 0
+offset_left = 1312.0
+offset_top = 224.0
+offset_right = 1774.0
+offset_bottom = 398.0
+stretch = true
+
+[node name="SmallCapsuleViewport" type="SubViewport" parent="Steam/SteamPanel/SmallCapsule"]
+unique_name_in_owner = true
+world_3d = SubResource("World3D_5uegb")
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(462, 174)
+render_target_update_mode = 4
+
+[node name="SmallCapsuleBgPanel" type="Panel" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5uegb")
+
+[node name="SmallCapsuleIconPanel" type="Panel" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel"]
+unique_name_in_owner = true
+self_modulate = Color(1, 0.83, 0.949, 0.0352941)
+material = SubResource("ShaderMaterial_0h0bt")
+custom_minimum_size = Vector2(462, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -150.0
+offset_right = 282.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0h0bt")
+
+[node name="SmallCapsuleIcon" type="TextureRect" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel"]
+unique_name_in_owner = true
+self_modulate = Color(0.97, 0.97, 0.97, 0.823529)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -247.0
+offset_top = -97.0
+offset_right = -53.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+script = ExtResource("5_5uegb")
+
+[node name="SmallCapsuleTabs" type="TabContainer" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -14.0
+offset_right = 203.0
+offset_bottom = 89.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.261799
+theme_override_styles/panel = SubResource("StyleBoxEmpty_p5xux")
+current_tab = 29
+tabs_visible = false
+
+[node name="English" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/English"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -116.41
+offset_top = -44.6506
+offset_right = -26.4102
+offset_bottom = 52.3494
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 61
+text = "Tic
+      Tac
+            Toe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Arabic" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Arabic"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -91.4856
+offset_top = -41.0779
+offset_right = 83.5144
+offset_bottom = 12.9221
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -82
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("6_frqin")
+theme_override_font_sizes/font_size = 80
+text = "إكس-أو"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Russian" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Russian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -87.8993
+offset_top = -23.5525
+offset_right = 87.1007
+offset_bottom = 30.4475
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 70
+text = "Хрестики
+    нулики"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SChinese" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/SChinese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -89.5723
+offset_top = -25.0361
+offset_right = 85.4277
+offset_bottom = -4.03606
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("8_lxbpk")
+theme_override_font_sizes/font_size = 85
+text = "井字棋"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TChinese" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/TChinese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -89.7432
+offset_top = -43.7168
+offset_right = 85.2568
+offset_bottom = 10.2832
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("8_lxbpk")
+theme_override_font_sizes/font_size = 70
+text = "井字遊戲"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Turkish" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 5
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Turkish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -86.7947
+offset_top = -31.5387
+offset_right = 88.2053
+offset_bottom = 22.4613
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 70
+text = "X-Oyunu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Danish" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 6
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Danish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.267
+offset_top = -23.7605
+offset_right = 74.7331
+offset_bottom = 32.2395
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -39
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 62
+text = "Trek på
+stribe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Czech" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 7
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Czech"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -90.0206
+offset_top = -27.2267
+offset_right = 84.9794
+offset_bottom = 28.7733
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -39
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 67
+text = "Piškvorky"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Indonesian" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 8
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Indonesian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -114.011
+offset_top = -57.4664
+offset_right = -31.0115
+offset_bottom = 67.5336
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 67
+text = "Tic
+     Tac
+          Toe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Korean" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 9
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Korean"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.5253
+offset_top = -3.58634
+offset_right = -13.4747
+offset_bottom = 1.41367
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("9_lxbpk")
+theme_override_font_sizes/font_size = 102
+text = "틱택토"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Finnish" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 10
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Finnish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.1566
+offset_top = 0.189472
+offset_right = 1.84338
+offset_bottom = 5.18947
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 67
+text = "Ristinolla"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="French" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 11
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/French"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.095
+offset_top = 2.27861
+offset_right = -29.905
+offset_bottom = 7.2786
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 67
+text = "Morpion"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Greek" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 12
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Greek"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.1123
+offset_top = -9.6407
+offset_right = -26.8877
+offset_bottom = -4.6407
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 67
+text = "Τρίλιζα"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hungarian" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 13
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Hungarian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.2654
+offset_top = 0.984506
+offset_right = -29.7346
+offset_bottom = 5.9845
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 67
+text = "Amőba"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Norwegian" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 14
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Norwegian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -70.0
+offset_top = -58.0
+offset_right = -45.0
+offset_bottom = 67.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 67
+text = "Tre
+    på
+        rad"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Italian" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 15
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Italian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 46.2122
+offset_top = -21.7816
+offset_right = -72.7878
+offset_bottom = 31.2184
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 97
+text = "Tris"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="German" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 16
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/German"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -110.356
+offset_top = -44.0636
+offset_right = -3.35583
+offset_bottom = 16.9364
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -64
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 71
+text = "Drei
+     gewinnt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Japanese" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 17
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Japanese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.1088
+offset_top = -1.17398
+offset_right = 15.8912
+offset_bottom = 10.826
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -64
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 71
+text = "○×ゲ-ム"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bulgarian" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 18
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Bulgarian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.70837
+offset_top = -2.38014
+offset_right = -18.2916
+offset_bottom = 11.6199
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -21
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 64
+text = "Кръстчета
+   и нули"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Romanian" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 19
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Romanian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -142.042
+offset_top = -49.448
+offset_right = -24.0419
+offset_bottom = 77.552
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -68
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 76
+text = "X
+     și
+           O"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spanish" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 20
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Spanish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -13.7075
+offset_top = -64.7542
+offset_right = -40.7075
+offset_bottom = 62.2458
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -68
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 71
+text = "Tres
+   en
+   Raya"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Polish" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 21
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Polish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -62.3183
+offset_top = -30.1567
+offset_right = 5.6817
+offset_bottom = 37.8433
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -57
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 71
+text = "Kółko i
+   krzyżyk"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Thai" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 22
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Thai"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -28.5295
+offset_top = -5.57391
+offset_right = 13.4705
+offset_bottom = 5.42609
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -57
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("10_5uegb")
+theme_override_font_sizes/font_size = 62
+text = "เกมโอเอ็กซ์"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Brazilian" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 23
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Brazilian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -93.8842
+offset_top = -28.262
+offset_right = -15.8842
+offset_bottom = 19.738
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 62
+text = "Jogo
+     da Velha"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Portuguese" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 24
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Portuguese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -93.8842
+offset_top = -28.262
+offset_right = -15.8842
+offset_bottom = 19.738
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 62
+text = "Jogo
+   do Galo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Swedish" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 25
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Swedish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -48.6058
+offset_top = -23.3767
+offset_right = 29.3942
+offset_bottom = 24.6234
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 62
+text = "Tre i rad"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LatinAmerica" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 26
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/LatinAmerica"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -51.5036
+offset_top = -24.1531
+offset_right = 26.4964
+offset_bottom = 23.8469
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 87
+text = "Gato"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ukrainian" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 27
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Ukrainian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.471
+offset_top = -4.17328
+offset_right = -23.529
+offset_bottom = 14.8267
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 67
+text = "Хрестики
+   нулики"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Vietnamese" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 28
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Vietnamese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.471
+offset_top = -4.17328
+offset_right = -23.529
+offset_bottom = 14.8267
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 67
+text = "Cờ ca-rô"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dutch" type="Control" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs"]
+layout_mode = 2
+metadata/_tab_index = 29
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/SmallCapsule/SmallCapsuleViewport/SmallCapsuleBgPanel/SmallCapsuleIconPanel/SmallCapsuleTabs/Dutch"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.0056
+offset_top = -31.9362
+offset_right = -11.0056
+offset_bottom = 37.0638
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 67
+text = "Boter,
+     kaas en
+           eieren"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HeaderCapsule" type="SubViewportContainer" parent="Steam/SteamPanel"]
+editor_description = "Header Capsule * 920px wide x 430px tall
+Design: This image should focus on the branding of your product. For best results, please use the same artwork that you use for any retail box or marketing and make sure the logo is clearly legible. Usage: It will appear at the top of your page in the store, in the 'recommended for you' section, in 'grid view' in customers libraries in the Steam client, in browse views on Big Picture mode, and for daily deals if applicable.
+Note: Needs one for each supported language."
+custom_minimum_size = Vector2(920, 430)
+layout_mode = 0
+offset_left = 1312.0
+offset_top = 448.0
+offset_right = 2232.0
+offset_bottom = 878.0
+stretch = true
+
+[node name="HeaderCapsuleViewport" type="SubViewport" parent="Steam/SteamPanel/HeaderCapsule"]
+unique_name_in_owner = true
+world_3d = SubResource("World3D_5uegb")
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(920, 430)
+render_target_update_mode = 4
+
+[node name="HeaderCapsuleBgPanel" type="Panel" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -29.0
+offset_right = 45.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5uegb")
+
+[node name="HeaderCapsuleIconPanel" type="Panel" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel"]
+unique_name_in_owner = true
+self_modulate = Color(1, 0.83, 0.949, 0.0352941)
+material = SubResource("ShaderMaterial_frqin")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -44.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0h0bt")
+
+[node name="HeaderCapsuleIcon" type="TextureRect" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel"]
+unique_name_in_owner = true
+self_modulate = Color(0.97, 0.97, 0.97, 0.823529)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 33.0
+offset_top = -210.0
+offset_right = 453.0
+offset_bottom = 210.0
+grow_vertical = 2
+expand_mode = 1
+script = ExtResource("5_5uegb")
+
+[node name="HeaderCapsuleTabs" type="TabContainer" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -338.0
+offset_top = -89.0
+offset_right = 343.0
+offset_bottom = 362.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.261799
+theme_override_styles/panel = SubResource("StyleBoxEmpty_p5xux")
+current_tab = 29
+tabs_visible = false
+
+[node name="English" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/English"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -46.7755
+offset_top = -45.6623
+offset_right = 3.22449
+offset_bottom = 51.3377
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "Tic
+      Tac
+            Toe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Arabic" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Arabic"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 239.304
+offset_top = 107.603
+offset_right = -11.6956
+offset_bottom = -155.397
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -82
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("6_frqin")
+theme_override_font_sizes/font_size = 160
+text = "إكس-أو"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Russian" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Russian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 234.734
+offset_top = 105.343
+offset_right = 18.7336
+offset_bottom = -101.657
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 125
+text = "Хрестики
+    нулики"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SChinese" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/SChinese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 202.257
+offset_top = 60.4063
+offset_right = 31.2574
+offset_bottom = -143.594
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("8_lxbpk")
+theme_override_font_sizes/font_size = 170
+text = "井字棋"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TChinese" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/TChinese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 199.253
+offset_top = 94.8007
+offset_right = 38.2532
+offset_bottom = -167.199
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("8_lxbpk")
+theme_override_font_sizes/font_size = 130
+text = "井字遊戲"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Turkish" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 5
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Turkish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 203.168
+offset_top = 107.238
+offset_right = 51.1677
+offset_bottom = -119.762
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 133
+text = "X-Oyunu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Danish" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 6
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Danish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 256.696
+offset_top = 54.2875
+offset_right = -25.3039
+offset_bottom = -51.7125
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -39
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "Trek på
+stribe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Czech" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 7
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Czech"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 217.0
+offset_top = 121.297
+offset_right = 19.0001
+offset_bottom = -137.703
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -39
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "Piškvorky"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Indonesian" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 8
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Indonesian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.40112
+offset_top = -20.0256
+offset_right = -35.5989
+offset_bottom = 8.97437
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "Tic
+     Tac
+          Toe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Korean" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 9
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Korean"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 135.184
+offset_top = -33.1412
+offset_right = 104.184
+offset_bottom = -28.1412
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("9_lxbpk")
+theme_override_font_sizes/font_size = 195
+text = "틱택토"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Finnish" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 10
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Finnish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 113.328
+offset_top = -17.2566
+offset_right = 118.328
+offset_bottom = -12.2567
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "Ristinolla"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="French" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 11
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/French"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 143.909
+offset_top = -3.88597
+offset_right = 93.9094
+offset_bottom = 1.11401
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 125
+text = "Morpion"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Greek" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 12
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Greek"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 128.025
+offset_top = -25.7419
+offset_right = 83.0248
+offset_bottom = -20.7419
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "Τρίλιζα"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hungarian" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 13
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Hungarian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 221.867
+offset_top = 91.5425
+offset_right = 6.86694
+offset_bottom = -111.457
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 155
+text = "Amőba"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Norwegian" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 14
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Norwegian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.1125
+offset_top = -53.1953
+offset_right = 35.1125
+offset_bottom = 71.8047
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "Tre
+    på
+        rad"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Italian" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 15
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Italian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 168.973
+offset_top = -8.55832
+offset_right = 49.9727
+offset_bottom = 44.4417
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 225
+text = "Tris"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="German" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 16
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/German"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -43.032
+offset_top = -51.9061
+offset_right = 63.968
+offset_bottom = 9.09387
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -119
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 135
+text = "Drei
+     gewinnt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Japanese" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 17
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Japanese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 111.964
+offset_top = -8.30449
+offset_right = 139.964
+offset_bottom = 3.6955
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -64
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 145
+text = "○×ゲ-ム"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bulgarian" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 18
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Bulgarian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 130.437
+offset_top = 3.8922
+offset_right = 109.437
+offset_bottom = 17.8922
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -21
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 130
+text = "Кръстчета
+   и нули"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Romanian" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 19
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Romanian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -74.7874
+offset_top = -53.168
+offset_right = 43.2126
+offset_bottom = 73.832
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -68
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "X
+     și
+           O"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spanish" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 20
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Spanish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 81.7668
+offset_top = -73.3361
+offset_right = 54.7668
+offset_bottom = 53.6639
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -68
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "Tres
+   en
+   Raya"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Polish" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 21
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Polish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.8441
+offset_top = -41.9645
+offset_right = 96.8441
+offset_bottom = 26.0355
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -57
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "Kółko i
+   krzyżyk"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Thai" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 22
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Thai"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 91.888
+offset_top = -26.1073
+offset_right = 133.888
+offset_bottom = -15.1073
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -57
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("10_5uegb")
+theme_override_font_sizes/font_size = 120
+text = "เกมโอเอ็กซ์"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Brazilian" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 23
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Brazilian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -25.4559
+offset_top = -44.0908
+offset_right = 52.5441
+offset_bottom = 3.90918
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "Jogo
+     da Velha"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Portuguese" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 24
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Portuguese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.8769
+offset_top = -38.6185
+offset_right = 103.877
+offset_bottom = 9.38153
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "Jogo
+   do Galo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Swedish" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 25
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Swedish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 68.1881
+offset_top = -30.3871
+offset_right = 146.188
+offset_bottom = 17.6131
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "Tre i rad"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LatinAmerica" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 26
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/LatinAmerica"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 66.7047
+offset_top = -28.714
+offset_right = 144.705
+offset_bottom = 19.286
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 165
+text = "Gato"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ukrainian" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 27
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Ukrainian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 117.053
+offset_top = -7.9763
+offset_right = 82.0529
+offset_bottom = 11.0237
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 120
+text = "Хрестики
+   нулики"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Vietnamese" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 28
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Vietnamese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 142.065
+offset_top = -24.0503
+offset_right = 107.065
+offset_bottom = -5.05032
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 120
+text = "Cờ ca-rô"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dutch" type="Control" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs"]
+layout_mode = 2
+metadata/_tab_index = 29
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/HeaderCapsule/HeaderCapsuleViewport/HeaderCapsuleBgPanel/HeaderCapsuleIconPanel/HeaderCapsuleTabs/Dutch"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -17.4882
+offset_top = -27.462
+offset_right = 67.5118
+offset_bottom = 41.538
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 120
+text = "Boter,
+     kaas en
+           eieren"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VerticalCapsule" type="SubViewportContainer" parent="Steam/SteamPanel"]
+editor_description = "Vertical Capsule * 748px wide x 896px tall
+Design: This is a vertical asset that is designed to market your game. For best results, please use the key art and logo that is being used for any retail boxes or marketing. Do not include quotes, review scores, or awards.
+Usage: These can appear at the top of the front page during seasonal sales, and on other new sale pages.
+Sizes: 748px x 896px
+Note: Needs one for each supported language."
+custom_minimum_size = Vector2(748, 896)
+layout_mode = 0
+offset_left = 1504.0
+offset_top = 928.0
+offset_right = 2252.0
+offset_bottom = 1824.0
+stretch = true
+
+[node name="VerticalCapsuleViewport" type="SubViewport" parent="Steam/SteamPanel/VerticalCapsule"]
+unique_name_in_owner = true
+world_3d = SubResource("World3D_5uegb")
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(748, 896)
+render_target_update_mode = 4
+
+[node name="VerticalCapsuleBgPanel" type="Panel" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -63.0
+offset_top = -40.0
+offset_right = 63.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5uegb")
+
+[node name="VerticalCapsuleIconPanel" type="Panel" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel"]
+unique_name_in_owner = true
+self_modulate = Color(1, 0.83, 0.949, 0.0352941)
+material = SubResource("ShaderMaterial_gibah")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0h0bt")
+
+[node name="VerticalCapsuleIcon" type="TextureRect" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel"]
+unique_name_in_owner = true
+self_modulate = Color(0.97, 0.97, 0.97, 0.823529)
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -317.0
+offset_top = 59.0
+offset_right = 317.0
+offset_bottom = 693.0
+grow_horizontal = 2
+expand_mode = 1
+script = ExtResource("5_5uegb")
+
+[node name="VerticalCapsuleTabs" type="TabContainer" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -346.0
+offset_top = 128.0
+offset_right = 346.0
+offset_bottom = 384.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_p5xux")
+current_tab = 29
+tabs_visible = false
+
+[node name="English" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/English"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -313.5
+offset_top = -108.0
+offset_right = 313.5
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 145
+text = "TicTacToe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Arabic" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Arabic"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -215.0
+offset_top = -94.0
+offset_right = 215.0
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -82
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("6_frqin")
+theme_override_font_sizes/font_size = 200
+text = "إكس-أو"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Russian" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Russian"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -127.0
+offset_right = 260.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 140
+text = "Хрестики
+    нулики"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SChinese" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/SChinese"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -322.5
+offset_top = -156.0
+offset_right = 322.5
+offset_bottom = 156.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("8_lxbpk")
+theme_override_font_sizes/font_size = 215
+text = "井字棋"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TChinese" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/TChinese"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -94.5
+offset_right = 260.0
+offset_bottom = 94.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("8_lxbpk")
+theme_override_font_sizes/font_size = 155
+text = "井字遊戲"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Turkish" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 5
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Turkish"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -251.5
+offset_top = -106.5
+offset_right = 251.5
+offset_bottom = 106.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 133
+text = "X-Oyunu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Danish" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 6
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Danish"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -199.5
+offset_top = -126.5
+offset_right = 199.5
+offset_bottom = 178.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -79
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "Trek på
+stribe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Czech" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 7
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Czech"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -271.5
+offset_top = -76.0
+offset_right = 271.5
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -39
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 135
+text = "Piškvorky"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Indonesian" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 8
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Indonesian"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.5
+offset_top = -120.0
+offset_right = 324.5
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 150
+text = "TicTacToe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Korean" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 9
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Korean"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.5
+offset_top = -98.0
+offset_right = 235.5
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("9_lxbpk")
+theme_override_font_sizes/font_size = 195
+text = "틱택토"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Finnish" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 10
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Finnish"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -296.5
+offset_top = -90.0
+offset_right = 296.5
+offset_bottom = 142.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 145
+text = "Ristinolla"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="French" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 11
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/French"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -245.0
+offset_top = -116.0
+offset_right = 245.0
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 155
+text = "Morpion"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Greek" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 12
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Greek"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -207.5
+offset_top = -96.0
+offset_right = 207.5
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 170
+text = "Τρίλιζα"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hungarian" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 13
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Hungarian"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -283.0
+offset_top = -125.5
+offset_right = 283.0
+offset_bottom = 177.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 190
+text = "Amőba"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Norwegian" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 14
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Norwegian"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.0
+offset_top = -112.0
+offset_right = 324.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 140
+text = "Tre på rad"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Italian" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 15
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Italian"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -183.5
+offset_top = -152.0
+offset_right = 183.5
+offset_bottom = 208.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 225
+text = "Tris"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="German" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 16
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/German"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -366.0
+offset_top = -172.5
+offset_right = 366.0
+offset_bottom = 190.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -149
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 160
+text = "Drei
+gewinnt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Japanese" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 17
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Japanese"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -344.5
+offset_top = -121.5
+offset_right = 344.5
+offset_bottom = 169.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -64
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 180
+text = "○×ゲ-ム"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bulgarian" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 18
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Bulgarian"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -259.5
+offset_top = -106.5
+offset_right = 259.5
+offset_bottom = 148.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -21
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 130
+text = "Кръстчета
+и нули"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Romanian" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 19
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Romanian"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.5
+offset_top = -131.5
+offset_right = 256.5
+offset_bottom = 171.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -68
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 190
+text = "X și O"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spanish" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 20
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Spanish"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -197.0
+offset_top = -134.0
+offset_right = 197.0
+offset_bottom = 182.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -98
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 140
+text = "Tres en
+Raya"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Polish" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 21
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Polish"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -268.5
+offset_top = -139.5
+offset_right = 268.5
+offset_bottom = 187.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -87
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "Kółko i
+krzyżyk"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Thai" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 22
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Thai"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -269.0
+offset_top = -72.0
+offset_right = 269.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -57
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("10_5uegb")
+theme_override_font_sizes/font_size = 150
+text = "เกมโอเอ็กซ์"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Brazilian" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 23
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Brazilian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -25.4559
+offset_top = -18.0908
+offset_right = 52.5441
+offset_bottom = 81.9092
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -62
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 130
+text = "Jogo
+da Velha"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Portuguese" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 24
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Portuguese"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = -159.0
+offset_right = 262.0
+offset_bottom = 217.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -72
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 140
+text = "Jogo
+do Galo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Swedish" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 25
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Swedish"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -316.0
+offset_top = -107.0
+offset_right = 316.0
+offset_bottom = 157.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 165
+text = "Tre i rad"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LatinAmerica" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 26
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/LatinAmerica"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.5
+offset_top = -146.0
+offset_right = 216.5
+offset_bottom = 198.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 215
+text = "Gato"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ukrainian" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 27
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Ukrainian"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = -118.0
+offset_right = 262.0
+offset_bottom = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 145
+text = "Хрестики
+нулики"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Vietnamese" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 28
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Vietnamese"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -205.5
+offset_top = -82.5
+offset_right = 205.5
+offset_bottom = 82.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 180
+text = "Cờ ca-rô"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dutch" type="Control" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs"]
+layout_mode = 2
+metadata/_tab_index = 29
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/VerticalCapsule/VerticalCapsuleViewport/VerticalCapsuleBgPanel/VerticalCapsuleIconPanel/VerticalCapsuleTabs/Dutch"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -323.5
+offset_top = -141.0
+offset_right = 323.5
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -27
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 155
+text = "Boter, kaas
+en eieren"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PageBackground" type="SubViewportContainer" parent="Steam/SteamPanel"]
+editor_description = "Page Background 1438px wide x 810px tall
+Usage: This should be ambient so as not to compete with the content on the page, so try to avoid high-contrast images or images with lots of text. A template will automatically be applied to your uploaded file, which will tint it blue and fade out the edges. If you don't upload an image here, we'll automatically take a random screenshot and generate a background image from that.
+This is the image that will be used in the background of your store page.
+Size: 1438px x 810px"
+custom_minimum_size = Vector2(1438, 810)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 928.0
+offset_right = 1470.0
+offset_bottom = 1824.0
+stretch = true
+
+[node name="PageBackgroundViewport" type="SubViewport" parent="Steam/SteamPanel/PageBackground"]
+unique_name_in_owner = true
+world_3d = SubResource("World3D_5uegb")
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1438, 896)
+render_target_update_mode = 4
+
+[node name="PageBackgroundBgPanel" type="Panel" parent="Steam/SteamPanel/PageBackground/PageBackgroundViewport"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -63.0
+offset_top = -40.0
+offset_right = 63.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5uegb")
+
+[node name="PageBackgroundIconPanel" type="Panel" parent="Steam/SteamPanel/PageBackground/PageBackgroundViewport/PageBackgroundBgPanel"]
+unique_name_in_owner = true
+self_modulate = Color(1, 0.83, 0.949, 0.0352941)
+material = SubResource("ShaderMaterial_gibah")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0h0bt")
+
+[node name="LibraryCapsule" type="SubViewportContainer" parent="Steam/SteamPanel"]
+editor_description = "Library Capsule * 600px wide x 900px tall
+Design:
+Usage: Size:
+This should be graphically-centric and give the user some sense of the experience. Please use the key art that is being used for any retail boxes or marketing as well as the name of your game, ideally using the same logo / title as printed on any retail or marketing. Do not include quotes, marketing copy, or other strings of text beyond the title of your application. The art should depict something important about your product. The logo should be easily legible against the background.
+This image is primarily used in the library overview and collection views
+600px x 900px (an additional half-size 300px x 450px PNG will be auto-generated from larger file)
+Note: Needs one for each supported language."
+custom_minimum_size = Vector2(600, 900)
+layout_mode = 0
+offset_left = 2272.0
+offset_top = 928.0
+offset_right = 2872.0
+offset_bottom = 1828.0
+stretch = true
+
+[node name="LibraryCapsuleViewport" type="SubViewport" parent="Steam/SteamPanel/LibraryCapsule"]
+unique_name_in_owner = true
+world_3d = SubResource("World3D_5uegb")
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(600, 900)
+render_target_update_mode = 4
+
+[node name="LibraryCapsuleBgPanel" type="Panel" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -63.0
+offset_top = -40.0
+offset_right = 63.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5uegb")
+
+[node name="LibraryCapsuleIconPanel" type="Panel" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel"]
+unique_name_in_owner = true
+self_modulate = Color(1, 0.83, 0.949, 0.0352941)
+material = SubResource("ShaderMaterial_umucs")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0h0bt")
+
+[node name="LibraryCapsuleIcon" type="TextureRect" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel"]
+unique_name_in_owner = true
+self_modulate = Color(0.97, 0.97, 0.97, 0.823529)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -367.0
+offset_right = 256.0
+offset_bottom = 145.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+script = ExtResource("5_5uegb")
+
+[node name="LibraryCapsuleTabs" type="TabContainer" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -371.0
+offset_top = 192.0
+offset_right = 321.0
+offset_bottom = 448.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.261799
+theme_override_styles/panel = SubResource("StyleBoxEmpty_p5xux")
+current_tab = 29
+tabs_visible = false
+
+[node name="English" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/English"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -313.5
+offset_top = -116.0
+offset_right = 313.5
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 125
+text = "TicTacToe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Arabic" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Arabic"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -215.0
+offset_top = -94.0
+offset_right = 215.0
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -82
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("6_frqin")
+theme_override_font_sizes/font_size = 180
+text = "إكس-أو"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Russian" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Russian"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -127.0
+offset_right = 260.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -52
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 140
+text = "Хрестики
+    нулики"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SChinese" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/SChinese"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -322.5
+offset_top = -156.0
+offset_right = 322.5
+offset_bottom = 156.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("8_lxbpk")
+theme_override_font_sizes/font_size = 175
+text = "井字棋"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TChinese" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/TChinese"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -94.5
+offset_right = 260.0
+offset_bottom = 94.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("8_lxbpk")
+theme_override_font_sizes/font_size = 140
+text = "井字遊戲"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Turkish" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 5
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Turkish"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -251.5
+offset_top = -106.5
+offset_right = 251.5
+offset_bottom = 106.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 133
+text = "X-Oyunu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Danish" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 6
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Danish"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -199.5
+offset_top = -126.5
+offset_right = 199.5
+offset_bottom = 178.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -79
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "Trek på
+stribe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Czech" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 7
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Czech"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -271.5
+offset_top = -76.0
+offset_right = 271.5
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -39
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 135
+text = "Piškvorky"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Indonesian" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 8
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Indonesian"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.5
+offset_top = -120.0
+offset_right = 324.5
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 125
+text = "TicTacToe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Korean" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 9
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Korean"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.5
+offset_top = -98.0
+offset_right = 235.5
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("9_lxbpk")
+theme_override_font_sizes/font_size = 195
+text = "틱택토"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Finnish" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 10
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Finnish"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -296.5
+offset_top = -90.0
+offset_right = 296.5
+offset_bottom = 142.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 140
+text = "Ristinolla"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="French" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 11
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/French"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.071
+offset_top = -116.273
+offset_right = 259.929
+offset_bottom = 131.727
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 155
+text = "Morpion"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Greek" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 12
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Greek"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -207.5
+offset_top = -96.0
+offset_right = 207.5
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 155
+text = "Τρίλιζα"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hungarian" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 13
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Hungarian"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -283.0
+offset_top = -125.5
+offset_right = 283.0
+offset_bottom = 177.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 190
+text = "Amőba"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Norwegian" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 14
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Norwegian"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -338.494
+offset_top = -120.908
+offset_right = 309.506
+offset_bottom = 229.092
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -98
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 140
+text = "Tre på
+rad"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Italian" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 15
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Italian"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -185.571
+offset_top = -144.273
+offset_right = 181.429
+offset_bottom = 215.727
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 225
+text = "Tris"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="German" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 16
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/German"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -366.0
+offset_top = -172.5
+offset_right = 366.0
+offset_bottom = 190.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -149
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 155
+text = "Drei
+gewinnt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Japanese" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 17
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Japanese"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -344.5
+offset_top = -121.5
+offset_right = 344.5
+offset_bottom = 169.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -64
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 150
+text = "○×ゲ-ム"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bulgarian" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 18
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Bulgarian"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -261.571
+offset_top = -98.7726
+offset_right = 257.429
+offset_bottom = 156.227
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -21
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 130
+text = "Кръстчета
+и нули"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Romanian" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 19
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Romanian"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.5
+offset_top = -131.5
+offset_right = 256.5
+offset_bottom = 171.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -68
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 190
+text = "X și O"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spanish" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 20
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Spanish"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -197.0
+offset_top = -134.0
+offset_right = 197.0
+offset_bottom = 182.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -98
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 140
+text = "Tres en
+Raya"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Polish" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 21
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Polish"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -268.5
+offset_top = -139.5
+offset_right = 268.5
+offset_bottom = 187.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -87
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "Kółko i
+krzyżyk"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Thai" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 22
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Thai"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -269.0
+offset_top = -72.0
+offset_right = 269.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -57
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("10_5uegb")
+theme_override_font_sizes/font_size = 125
+text = "เกมโอเอ็กซ์"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Brazilian" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 23
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Brazilian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -25.4559
+offset_top = -18.0908
+offset_right = 52.5441
+offset_bottom = 81.9092
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -62
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 130
+text = "Jogo
+da Velha"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Portuguese" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 24
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Portuguese"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = -159.0
+offset_right = 262.0
+offset_bottom = 217.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -72
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 140
+text = "Jogo
+do Galo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Swedish" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 25
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Swedish"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -316.0
+offset_top = -107.0
+offset_right = 316.0
+offset_bottom = 157.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 140
+text = "Tre i rad"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LatinAmerica" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 26
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/LatinAmerica"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.5
+offset_top = -146.0
+offset_right = 216.5
+offset_bottom = 198.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 215
+text = "Gato"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ukrainian" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 27
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Ukrainian"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = -118.0
+offset_right = 262.0
+offset_bottom = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 145
+text = "Хрестики
+нулики"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Vietnamese" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 28
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Vietnamese"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -205.5
+offset_top = -82.5
+offset_right = 205.5
+offset_bottom = 82.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 155
+text = "Cờ ca-rô"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dutch" type="Control" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs"]
+layout_mode = 2
+metadata/_tab_index = 29
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryCapsule/LibraryCapsuleViewport/LibraryCapsuleBgPanel/LibraryCapsuleIconPanel/LibraryCapsuleTabs/Dutch"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -323.5
+offset_top = -141.0
+offset_right = 323.5
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -27
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 125
+text = "Boter, kaas
+en eieren"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LibraryHeader" type="SubViewportContainer" parent="Steam/SteamPanel"]
+editor_description = "Library Header * 920px wide x 430px tall
+Design:
+Usage:
+Size:
+This image should focus on the branding of your product. For best results, please use similar artwork to the Library Capsule and make sure the logo is clearly legible. Appears in various places in the Steam Client Library, including Recent Games. If not set, then the Header Capsule is used.
+920px x 430px
+Note: Needs one for each supported language."
+custom_minimum_size = Vector2(920, 430)
+layout_mode = 0
+offset_left = 2912.0
+offset_top = 1152.0
+offset_right = 3832.0
+offset_bottom = 1582.0
+stretch = true
+
+[node name="LibraryHeaderViewport" type="SubViewport" parent="Steam/SteamPanel/LibraryHeader"]
+unique_name_in_owner = true
+world_3d = SubResource("World3D_5uegb")
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(920, 430)
+render_target_update_mode = 4
+
+[node name="LibraryHeaderBgPanel" type="Panel" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -63.0
+offset_top = -40.0
+offset_right = 63.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5uegb")
+
+[node name="LibraryHeaderIconPanel" type="Panel" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel"]
+unique_name_in_owner = true
+self_modulate = Color(1, 0.83, 0.949, 0.0352941)
+material = SubResource("ShaderMaterial_umucs")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0h0bt")
+
+[node name="LibraryHeaderIcon" type="TextureRect" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel"]
+unique_name_in_owner = true
+self_modulate = Color(0.97, 0.97, 0.97, 0.823529)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 51.0
+offset_top = -210.0
+offset_right = 471.0
+offset_bottom = 210.0
+grow_vertical = 2
+expand_mode = 1
+script = ExtResource("5_5uegb")
+
+[node name="LibraryHeaderTabs" type="TabContainer" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -145.0
+offset_right = 405.0
+offset_bottom = 306.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.261799
+theme_override_styles/panel = SubResource("StyleBoxEmpty_p5xux")
+current_tab = 29
+tabs_visible = false
+
+[node name="English" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/English"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -244.884
+offset_top = -255.943
+offset_right = 216.116
+offset_bottom = 250.057
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -107
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 135
+text = "Tic
+  Tac
+     Toe"
+vertical_alignment = 1
+
+[node name="Arabic" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Arabic"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -296.158
+offset_top = -149.589
+offset_right = 254.842
+offset_bottom = 91.4105
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -82
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("6_frqin")
+theme_override_font_sizes/font_size = 170
+text = "إكس-أو"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Russian" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Russian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -26.8292
+offset_top = 80.8097
+offset_right = -36.8292
+offset_bottom = -84.1905
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -57
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 141
+text = "Хрестики
+    нулики"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SChinese" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/SChinese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.14645
+offset_top = 53.4541
+offset_right = -47.1465
+offset_bottom = -128.546
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("8_lxbpk")
+theme_override_font_sizes/font_size = 165
+text = "井字棋"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TChinese" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/TChinese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.8627
+offset_top = 101.043
+offset_right = -13.8627
+offset_bottom = -153.957
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("8_lxbpk")
+theme_override_font_sizes/font_size = 135
+text = "井字遊戲"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Turkish" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 5
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Turkish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.8765
+offset_top = 102.148
+offset_right = -42.8765
+offset_bottom = -124.852
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 133
+text = "X-Oyunu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Danish" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 6
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Danish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 37.2364
+offset_top = 50.3532
+offset_right = -79.7636
+offset_bottom = -55.6465
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -71
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 125
+text = "Trek på
+stribe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Czech" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 7
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Czech"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -19.7766
+offset_top = 108.581
+offset_right = -29.7766
+offset_bottom = -133.419
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -39
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 130
+text = "Piškvorky"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Indonesian" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 8
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Indonesian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -271.809
+offset_top = -21.0672
+offset_right = -70.809
+offset_bottom = 7.93283
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -100
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 137
+text = "Tic
+     Tac
+          Toe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Korean" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 9
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Korean"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -30.7016
+offset_top = -20.6498
+offset_right = -32.7016
+offset_bottom = -15.6497
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("9_lxbpk")
+theme_override_font_sizes/font_size = 220
+text = "틱택토"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Finnish" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 10
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Finnish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -34.1864
+offset_top = -15.3719
+offset_right = -15.1863
+offset_bottom = -10.3721
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 135
+text = "Ristinolla"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="French" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 11
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/French"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.67471
+offset_top = -17.8536
+offset_right = -51.6747
+offset_bottom = -12.8536
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 145
+text = "Morpion"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Greek" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 12
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Greek"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.69594
+offset_top = 48.435
+offset_right = -36.6959
+offset_bottom = -106.565
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 145
+text = "Τρίλιζα"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hungarian" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 13
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Hungarian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -11.4251
+offset_top = 73.5491
+offset_right = -23.4251
+offset_bottom = -97.4509
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 175
+text = "Amőba"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Norwegian" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 14
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Norwegian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0646
+offset_top = -8.27726
+offset_right = -114.935
+offset_bottom = 3.72275
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -133
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 152
+text = "Tre
+  på
+   rad"
+vertical_alignment = 1
+
+[node name="Italian" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 15
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Italian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = 53.0
+offset_right = -91.0
+offset_bottom = -38.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 225
+text = "Tris"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="German" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 16
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/German"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 30.0
+offset_right = -34.0
+offset_bottom = -108.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -135
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 140
+text = "Drei
+gewinnt"
+vertical_alignment = 1
+
+[node name="Japanese" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 17
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Japanese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -49.6696
+offset_top = 111.959
+offset_right = -21.6696
+offset_bottom = -137.041
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -64
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 125
+text = "○×ゲ-ム"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bulgarian" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 18
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Bulgarian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -30.0131
+offset_top = -3.90086
+offset_right = -24.0131
+offset_bottom = 10.0992
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -40
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 135
+text = "Кръстчета
+   и нули"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Romanian" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 19
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Romanian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -287.467
+offset_top = -70.8148
+offset_right = -89.467
+offset_bottom = 62.1855
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -128
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 150
+text = "X
+     și
+           O"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spanish" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 20
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Spanish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -90.0849
+offset_top = -81.0783
+offset_right = -95.0849
+offset_bottom = 45.9217
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -151
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 160
+text = "Tres
+   en
+   Raya"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Polish" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 21
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Polish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.539
+offset_top = 38.8636
+offset_right = -116.461
+offset_bottom = -85.1364
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -57
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "Kółko i
+krzyżyk"
+vertical_alignment = 1
+
+[node name="Thai" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 22
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Thai"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -42.5987
+offset_top = 124.207
+offset_right = -0.598694
+offset_bottom = -182.793
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -57
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("10_5uegb")
+theme_override_font_sizes/font_size = 120
+text = "เกมโอเอ็กซ์"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Brazilian" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 23
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Brazilian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -18.7686
+offset_top = 19.8176
+offset_right = -20.7687
+offset_bottom = -80.1824
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -97
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 140
+text = "Jogo
+da Velha"
+vertical_alignment = 1
+
+[node name="Portuguese" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 24
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Portuguese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.55417
+offset_top = 9.40039
+offset_right = -36.5542
+offset_bottom = -60.5996
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -117
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 156
+text = "Jogo
+do Galo"
+vertical_alignment = 1
+
+[node name="Swedish" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 25
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Swedish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -70.9201
+offset_top = 106.265
+offset_right = 7.07983
+offset_bottom = -120.735
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 140
+text = "Tre i rad"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LatinAmerica" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 26
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/LatinAmerica"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 19.4015
+offset_top = 43.5038
+offset_right = -100.598
+offset_bottom = -80.4962
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 205
+text = "Gato"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ukrainian" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 27
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Ukrainian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -17.1193
+offset_top = 94.7994
+offset_right = -44.1193
+offset_bottom = -107.201
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 140
+text = "Хрестики
+   нулики"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Vietnamese" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 28
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Vietnamese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -14.2028
+offset_top = 80.0518
+offset_right = -32.2028
+offset_bottom = -165.948
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 150
+text = "Cờ ca-rô"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dutch" type="Control" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs"]
+layout_mode = 2
+metadata/_tab_index = 29
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryHeader/LibraryHeaderViewport/LibraryHeaderBgPanel/LibraryHeaderIconPanel/LibraryHeaderTabs/Dutch"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 57.0
+offset_right = -49.0
+offset_bottom = -81.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -37
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 122
+text = "Boter,
+  kaas en
+      eieren"
+vertical_alignment = 1
+
+[node name="LibraryHero" type="SubViewportContainer" parent="Steam/SteamPanel"]
+editor_description = "Library Hero * 3840px wide x 1240px tall
+The hero graphic and logo are layered and move independently when the page is scrolled, creating a subtle parallax effect. Consider how the product logo will be placed on top of the hero image (left bottom corner or centered). You'll want to ensure the logo is both visible and legible against the background.
+Design:
+Usage: Size:
+This should be a visually rich image that is easily recognizable. For best results, please use the key art that is used for any retail boxes or marketing. Do not include quotes or other strings of text.
+At the center of the template is a \"safe area\" of 860px x 380px. This area will remain uncropped across scaling and resizing of the Steam client window. Artwork should extend across the entire template, but critical content should be within the safe area. For ex: a main character's face should be entirely in the safe area or risk being cropped.
+Library Hero image should not contain any text or logos. Your logo to display at the top of your library detail page should be uploaded separately in the Library Logo file (details below).
+Appears at the top of a user's library details page for this product.
+3840px x 1240px (an additional half-size 1920px x 620px PNG will be auto-generated from larger file)"
+custom_minimum_size = Vector2(3840, 1240)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 1856.0
+offset_right = 3872.0
+offset_bottom = 3096.0
+stretch = true
+
+[node name="LibraryHeroViewport" type="SubViewport" parent="Steam/SteamPanel/LibraryHero"]
+unique_name_in_owner = true
+world_3d = SubResource("World3D_5uegb")
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(3840, 1240)
+render_target_update_mode = 4
+
+[node name="LibraryHeroBgPanel" type="Panel" parent="Steam/SteamPanel/LibraryHero/LibraryHeroViewport"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -63.0
+offset_top = -40.0
+offset_right = 63.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5uegb")
+
+[node name="LibraryHeroIconPanel" type="Panel" parent="Steam/SteamPanel/LibraryHero/LibraryHeroViewport/LibraryHeroBgPanel"]
+unique_name_in_owner = true
+self_modulate = Color(1, 0.83, 0.949, 0.0352941)
+material = SubResource("ShaderMaterial_is476")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0h0bt")
+
+[node name="LibraryHeroIcon" type="TextureRect" parent="Steam/SteamPanel/LibraryHero/LibraryHeroViewport/LibraryHeroBgPanel/LibraryHeroIconPanel"]
+self_modulate = Color(0.97, 0.97, 0.97, 0.823529)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -384.0
+offset_top = -384.0
+offset_right = 384.0
+offset_bottom = 384.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_is476")
+
+[node name="LibraryLogoCheckerPanel" type="PanelContainer" parent="Steam/SteamPanel"]
+layout_mode = 0
+offset_left = 2272.0
+offset_top = 160.0
+offset_right = 3552.0
+offset_bottom = 880.0
+theme_override_styles/panel = SubResource("StyleBox_is476")
+
+[node name="LibraryLogo" type="SubViewportContainer" parent="Steam/SteamPanel/LibraryLogoCheckerPanel"]
+editor_description = "Library Logo * Either 1280px wide and/or 720px tall
+After upload, you can use the preview tool to select the logo's position. Options include: left bottom corner, centered top, centered middle, and centered bottom.
+Note: If a hero graphic and logo are not uploaded, the hero area will display a screenshot from the store, with the application name in text overlaid in the bottom left corner.
+Design:
+Usage: Size:
+For best results, use the logo that is being used for any retail boxes or marketing. You'll want to ensure the logo is both visible and legible against the hero graphic background, sometimes a drop shadow can help. The PNG image should have a transparent background. You should use the best aspect ratio for your art, however the logo must be either 1280px wide and/or 720px tall.
+Appears at the top of a user's library details page for this product, placed on top of the hero graphic.
+Either 1280px wide and/or 720px tall (an additional half-size PNG will be auto-generated based on your logo's aspect ratio).
+Note: Needs one for each supported language."
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 2
+stretch = true
+
+[node name="LibraryLogoViewport" type="SubViewport" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo"]
+unique_name_in_owner = true
+world_3d = SubResource("World3D_5uegb")
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+
+[node name="LibraryLogoIcon" type="TextureRect" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport"]
+unique_name_in_owner = true
+self_modulate = Color(0.97, 0.97, 0.97, 0.823529)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -544.0
+offset_top = -288.0
+offset_right = 32.0
+offset_bottom = 288.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+script = ExtResource("5_5uegb")
+
+[node name="LibraryLogoTabs" type="TabContainer" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport"]
+unique_name_in_owner = true
+offset_left = 55.0
+offset_top = 191.0
+offset_right = 1335.0
+offset_bottom = 911.0
+rotation = -0.261799
+theme_override_styles/panel = SubResource("StyleBoxEmpty_p5xux")
+current_tab = 29
+tabs_visible = false
+
+[node name="English" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/English"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -88.1768
+offset_top = -7.06243
+offset_right = 1.82312
+offset_bottom = 89.9376
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -107
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 150
+text = "Tic
+      Tac
+            Toe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Arabic" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Arabic"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 271.578
+offset_top = 106.933
+offset_right = 20.5781
+offset_bottom = -156.067
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -82
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("6_frqin")
+theme_override_font_sizes/font_size = 205
+text = "إكس-أو"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Russian" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Russian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 258.415
+offset_top = 125.147
+offset_right = 42.4144
+offset_bottom = -81.8531
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 160
+text = "Хрестики
+    нулики"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SChinese" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/SChinese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 226.059
+offset_top = 87.4894
+offset_right = 55.0594
+offset_bottom = -116.511
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("8_lxbpk")
+theme_override_font_sizes/font_size = 185
+text = "井字棋"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TChinese" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/TChinese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 230.024
+offset_top = 111.328
+offset_right = 69.0243
+offset_bottom = -150.672
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("8_lxbpk")
+theme_override_font_sizes/font_size = 155
+text = "井字遊戲"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Turkish" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 5
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Turkish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 219.311
+offset_top = 128.128
+offset_right = 67.3107
+offset_bottom = -98.8724
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 133
+text = "X-Oyunu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Danish" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 6
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Danish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 253.123
+offset_top = 79.2121
+offset_right = -28.8767
+offset_bottom = -26.7878
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -89
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 150
+text = "Trek på
+stribe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Czech" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 7
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Czech"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 260.069
+offset_top = 142.155
+offset_right = 62.0696
+offset_bottom = -116.845
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -39
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 160
+text = "Piškvorky"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Indonesian" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 8
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Indonesian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.60542
+offset_top = 21.976
+offset_right = -33.3945
+offset_bottom = 50.976
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -118
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 170
+text = "Tic
+     Tac
+          Toe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Korean" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 9
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Korean"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 173.645
+offset_top = 16.5049
+offset_right = 142.645
+offset_bottom = 21.5049
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("9_lxbpk")
+theme_override_font_sizes/font_size = 240
+text = "틱택토"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Finnish" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 10
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Finnish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 151.978
+offset_top = 35.5461
+offset_right = 156.978
+offset_bottom = 40.5459
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 155
+text = "Ristinolla"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="French" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 11
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/French"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 178.146
+offset_top = 22.8875
+offset_right = 128.147
+offset_bottom = 27.8875
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 185
+text = "Morpion"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Greek" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 12
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Greek"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 476.557
+offset_top = 207.409
+offset_right = -164.443
+offset_bottom = -216.591
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 185
+text = "Τρίλιζα"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hungarian" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 13
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Hungarian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 260.536
+offset_top = 128.821
+offset_right = 45.5363
+offset_bottom = -74.1784
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 210
+text = "Amőba"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Norwegian" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 14
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Norwegian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.25696
+offset_top = -26.2187
+offset_right = 23.743
+offset_bottom = 98.7813
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -133
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 180
+text = "Tre
+    på
+        rad"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Italian" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 15
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Italian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 193.809
+offset_top = 14.6611
+offset_right = 74.8091
+offset_bottom = 67.6611
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -48
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 300
+text = "Tris"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="German" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 16
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/German"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -38.5999
+offset_top = -41.4011
+offset_right = 68.4001
+offset_bottom = 19.5989
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -160
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 170
+text = "Drei
+     gewinnt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Japanese" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 17
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Japanese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 142.356
+offset_top = 1.90957
+offset_right = 170.356
+offset_bottom = 13.9095
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -64
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 165
+text = "○×ゲ-ム"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bulgarian" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 18
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Bulgarian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 168.21
+offset_top = 36.7894
+offset_right = 147.21
+offset_bottom = 50.7894
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -21
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 155
+text = "Кръстчета
+   и нули"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Romanian" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 19
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Romanian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -68.7702
+offset_top = -21.5327
+offset_right = 49.2299
+offset_bottom = 105.467
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -68
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 150
+text = "X
+     și
+           O"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spanish" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 20
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Spanish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 80.7637
+offset_top = -42.5466
+offset_right = 53.7637
+offset_bottom = 84.4534
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -168
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 175
+text = "Tres
+   en
+   Raya"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Polish" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 21
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Polish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.3729
+offset_top = -12.8109
+offset_right = 128.373
+offset_bottom = 55.1891
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -57
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 120
+text = "Kółko i
+   krzyżyk"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Thai" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 22
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Thai"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 132.836
+offset_top = -8.92368
+offset_right = 174.836
+offset_bottom = 2.07623
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -57
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("10_5uegb")
+theme_override_font_sizes/font_size = 145
+text = "เกมโอเอ็กซ์"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Brazilian" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 23
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Brazilian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -36.4972
+offset_top = -22.2027
+offset_right = 41.5029
+offset_bottom = 25.7973
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -117
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 160
+text = "Jogo
+     da Velha"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Portuguese" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 24
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Portuguese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.7711
+offset_top = -27.0274
+offset_right = 100.771
+offset_bottom = 20.9727
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -117
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 175
+text = "Jogo
+   do Galo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Swedish" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 25
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Swedish"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 118.019
+offset_top = -7.71752
+offset_right = 196.019
+offset_bottom = 40.2826
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 160
+text = "Tre i rad"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LatinAmerica" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 26
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/LatinAmerica"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 96.1122
+offset_top = -3.2346
+offset_right = 174.112
+offset_bottom = 44.7654
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -47
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("2_p5xux")
+theme_override_font_sizes/font_size = 260
+text = "Gato"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ukrainian" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 27
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Ukrainian"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 167.313
+offset_top = 32.4081
+offset_right = 132.313
+offset_bottom = 51.4081
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -67
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 175
+text = "Хрестики
+   нулики"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Vietnamese" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 28
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Vietnamese"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 164.074
+offset_top = -5.72989
+offset_right = 129.074
+offset_bottom = 13.2701
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 170
+text = "Cờ ca-rô"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dutch" type="Control" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs"]
+layout_mode = 2
+metadata/_tab_index = 29
+
+[node name="Label" type="Label" parent="Steam/SteamPanel/LibraryLogoCheckerPanel/LibraryLogo/LibraryLogoViewport/LibraryLogoTabs/Dutch"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -14.3502
+offset_top = -12.1273
+offset_right = 70.6497
+offset_bottom = 56.8727
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.301961)
+theme_override_constants/line_spacing = -37
+theme_override_constants/shadow_offset_x = -6
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("7_gibah")
+theme_override_font_sizes/font_size = 145
+text = "Boter,
+     kaas en
+           eieren"
+horizontal_alignment = 1
+vertical_alignment = 1
